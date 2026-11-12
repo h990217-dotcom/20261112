@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#171a1a">
+<meta name="description" content="NEXT CHAPTER — 영상, 앱, 강의, 소상공인 콘텐츠를 기획하고 만드는 디지털 기획자의 포트폴리오">
+<title>NEXT CHAPTER | Digital Planner Portfolio</title>
+<style>
+:root{--bg:#f7f6f2;--text:#222522;--sub:#6e716d;--line:#dcded7;--accent:#86766b;--deep:#171a1a;--light:#f1efea}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--text);background:var(--bg);font-family:Pretendard,"Noto Sans KR",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}button{font:inherit;cursor:pointer}button:focus-visible,a:focus-visible{outline:3px solid #c29f82;outline-offset:4px}button:hover,a:hover{transition:opacity .2s}.wrap{width:min(1320px,calc(100% - 64px));margin:auto}
+nav{height:73px;position:fixed;z-index:20;left:0;right:0;top:0;display:flex;align-items:center;justify-content:space-between;padding:0 clamp(22px,4vw,70px);background:rgba(247,246,242,.91);backdrop-filter:blur(20px);border-bottom:1px solid rgba(0,0,0,.07)}
+.brand{font-size:16px;font-weight:780;letter-spacing:-.04em}.nav-right{display:flex;align-items:center;gap:clamp(13px,2.4vw,38px)}nav .nav-right a{font-size:12px;font-weight:680;letter-spacing:.06em}nav .nav-right a:hover{color:var(--accent)}
+.hero{position:relative;height:min(880px,100svh);min-height:590px;background:#101313;color:white;overflow:hidden;display:grid;place-items:center}
+.hero iframe{position:absolute;inset:50% auto auto 50%;transform:translate(-50%,-50%);width:max(100%,177.778vh);height:max(100%,56.25vw);border:none;pointer-events:none;opacity:.74;filter:brightness(.72) saturate(.83)}
+.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.66),rgba(0,0,0,.11) 77%),linear-gradient(0deg,rgba(0,0,0,.46),transparent 42%);pointer-events:none}
+.hero-content{position:relative;z-index:1;width:min(1320px,calc(100% - 64px));padding-top:110px}.eyebrow{font-size:11px;font-weight:780;letter-spacing:.23em;text-transform:uppercase;color:var(--accent)}.hero .eyebrow{color:#d8c6b9}
+.hero h1{font-weight:690;letter-spacing:-.065em;line-height:.99;font-size:clamp(65px,11vw,168px);margin:26px 0 24px}.hero h1 em{font-weight:420;font-style:normal;color:#dfd1c6}.hero-desc{font-size:clamp(16px,1.7vw,23px);line-height:1.7;font-weight:350;color:#eee5df}
+.hero-actions{display:flex;gap:20px;align-items:center;flex-wrap:wrap;margin-top:46px}.hero-actions a,.hero-actions button{border:1px solid rgba(255,255,255,.6);padding:14px 20px;background:transparent;color:white;border-radius:0;font-size:12px;font-weight:720;letter-spacing:.05em}.hero-actions button{border-color:transparent;text-decoration:underline;text-underline-offset:6px}.hero-actions a:hover,.hero-actions button:hover{background:rgba(255,255,255,.15)}
+.section{padding:118px 0 92px;scroll-margin-top:73px}.section-heading{display:flex;justify-content:space-between;gap:24px;align-items:end;margin-bottom:48px;padding-bottom:25px;border-bottom:1px solid var(--line)}.section-heading h2{font-size:clamp(42px,6vw,77px);line-height:1.05;letter-spacing:-.065em;font-weight:650;margin:15px 0 0}.section-heading p{max-width:410px;font-size:14px;line-height:1.9;color:var(--sub);margin:0 0 7px}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:35px 20px}.work{min-width:0}.image-button{position:relative;display:block;width:100%;padding:0;border:0;background:#e6e2d8;text-align:left;overflow:hidden;aspect-ratio:16/9}.image-button img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s ease}.image-button:hover img{transform:scale(1.045)}.image-button:after{content:"▶ PLAY";position:absolute;right:14px;bottom:14px;color:white;background:rgba(16,16,16,.78);padding:9px 12px;font-size:11px;letter-spacing:.09em;font-weight:750}.image-button .placeholder{position:absolute;inset:0;display:grid;place-items:center;color:#bbb;font-size:34px;font-weight:700;letter-spacing:-.05em}
+.work-meta{padding:17px 0 0}.work-meta .num{color:var(--accent);font-size:10px;font-weight:800;letter-spacing:.15em}.work-meta h3{font-size:23px;font-weight:660;letter-spacing:-.035em;margin:7px 0 8px}.work-meta p{font-size:13px;line-height:1.65;margin:0;color:var(--sub)}
+.apps{display:grid;grid-template-columns:1fr 1fr;gap:22px}.app{border-top:3px solid var(--deep);padding:32px 0 27px;display:flex;flex-direction:column;min-height:370px;gap:22px}.app h3{font-size:clamp(26px,3vw,41px);letter-spacing:-.05em;margin:0}.app p{font-size:15px;line-height:1.9;color:var(--sub);max-width:500px;margin:0}.app-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:auto}.action{display:inline-flex;align-items:center;justify-content:space-between;gap:18px;padding:13px 18px;background:var(--deep);border:1px solid var(--deep);color:#fff;font-size:12px;font-weight:690;min-width:155px}.action.secondary{background:transparent;color:var(--deep)}.action:hover{opacity:.75}.app .kicker{font-size:11px;color:var(--accent);letter-spacing:.16em;font-weight:760}
+.story{background:#eae7e0}.storyline{display:grid;grid-template-columns:1fr 1fr;gap:55px;align-items:center}.storyline h2{font-size:clamp(40px,6vw,75px);letter-spacing:-.055em;line-height:1.18;font-weight:650;margin:18px 0 28px}.storyline p{color:#5d605c;font-size:15px;line-height:2}.storyline .aside{font-size:clamp(23px,3vw,37px);line-height:1.65;letter-spacing:-.035em;border-top:1px solid #b5b2ad;border-bottom:1px solid #b5b2ad;padding:40px 0;color:#464742}
+footer{padding:48px 0 60px;background:var(--deep);color:#eaeae7}footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}footer .foot-title{font-size:35px;letter-spacing:-.06em;font-weight:700}footer .small{color:#b0aca7;font-size:12px;line-height:1.8}
+.modal[hidden]{display:none}.modal{position:fixed;inset:0;z-index:80;background:rgba(7,7,7,.91);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:74px 24px 26px}.modal-top{width:min(1120px,100%);display:flex;justify-content:space-between;align-items:center;color:#fff;margin-bottom:14px;gap:20px}.modal-title{font-size:14px;font-weight:700}.close{border:1px solid rgba(255,255,255,.5);width:45px;height:45px;border-radius:50%;background:#fff;color:#111;font-size:25px;line-height:1}.player{width:min(1120px,100%);aspect-ratio:16/9;background:#000}.player iframe{border:0;width:100%;height:100%}.modal-bottom{width:min(1120px,100%);display:flex;justify-content:space-between;gap:16px;margin-top:12px;align-items:center;color:#bfbfbf;font-size:12px}.modal-bottom a{color:#fff;text-decoration:underline;text-underline-offset:4px}
+@media(max-width:900px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.section-heading{display:block}.section-heading p{margin-top:22px}.storyline{grid-template-columns:1fr}.hero iframe{width:max(100%,177.778svh);height:max(100%,56.25vw)}}
+@media(max-width:650px){nav{height:63px;padding:0 18px}.nav-right{gap:12px}.nav-right a{font-size:10px}.wrap{width:calc(100% - 36px)}.hero-content{width:calc(100% - 36px)}.hero{min-height:620px}.hero h1{font-size:clamp(55px,16vw,95px)}.hero-desc{font-size:15px}.section{padding:80px 0 64px}.grid,.apps{grid-template-columns:1fr}.section-heading{margin-bottom:30px}.section-heading h2{font-size:50px}.work-meta h3{font-size:24px}.app{min-height:280px}.modal{padding:74px 12px 24px}.modal-bottom{align-items:flex-start}.player{width:100%}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.image-button img{transition:none}}
+</style>
+</head>
+<body>
+<nav><a class="brand" href="#top">NEXT CHAPTER.</a><div class="nav-right"><a href="#film">FILM</a><a href="#app">APP</a><a href="#business">LOCAL</a><a href="#more">MORE</a></div></nav>
+<header class="hero" id="top">
+  <iframe id="heroVideo" title="인트로 영상" src="https://www.youtube-nocookie.com/embed/Ynnhg4bBAZI?autoplay=1&mute=1&loop=1&playlist=Ynnhg4bBAZI&controls=0&playsinline=1&rel=0" allow="autoplay; encrypted-media; picture-in-picture" referrerpolicy="strict-origin-when-cross-origin" loading="eager"></iframe>
+  <div class="hero-content"><div class="eyebrow">20 Years. One New Beginning.</div><h1>NEXT<br><em>CHAPTER.</em></h1><div class="hero-desc">끝이 아닌, 다음 장면.<br>사람을 관찰하고, 이야기를 영상과 서비스로 만듭니다.</div><div class="hero-actions"><a href="#film">작품 둘러보기 ↗</a><button type="button" data-video="Ynnhg4bBAZI" data-name="인트로 영상">인트로 영상 소리와 함께 보기 ↗</button></div></div>
+</header>
+<main>
+<section class="section wrap" id="film"><div class="section-heading"><div><div class="eyebrow">01 / Creative Films</div><h2>FILM.</h2></div><p>한 아이디어를 서로 다른 시각 언어로 표현한 2D, 2D 모션, 3D 작업입니다. 이미지를 클릭하면 이 페이지 안에서 재생됩니다.</p></div><div class="grid" id="filmItems"></div></section>
+<section class="section wrap" id="app"><div class="section-heading"><div><div class="eyebrow">02 / Digital Service</div><h2>APP.</h2></div><p>직접 사용하는 사람을 위해 기획한 두 가지 서비스입니다. 앱은 새 탭에서 열리므로 포트폴리오 화면이 그대로 남습니다.</p></div>
+<div class="apps"><article class="app"><div class="kicker">LEARNING SERVICE / 01</div><h3>한 장씩 중국어</h3><p>장 선택부터 본문, 병음, 문장별 공부, 단어, 녹음까지 이어지는 학습 경험. 실제 수업 흐름에서 필요한 기능을 정리했습니다.</p><div class="app-actions"><a class="action" href="https://ningning-chinese-study.tinythyme2.chatgpt.site/" target="_blank" rel="noopener noreferrer">중국어 학습 앱 열기 <span>↗</span></a><button class="action secondary" type="button" data-video="3u0M884jX5s" data-name="중국어 학습 앱 소개 영상">소개 영상 재생 <span>▶</span></button></div></article>
+<article class="app"><div class="kicker">READING COMMUNITY / 02</div><h3>꾸도북</h3><p>독서 인증을 모아 함께 읽는 기록으로 만드는 커뮤니티 앱. 최근 기록과 참여자, 개인별 책장을 모바일 중심으로 정리했습니다.</p><div class="app-actions"><a class="action" href="https://kkudobook-reading-garden.tinythyme2.chatgpt.site/" target="_blank" rel="noopener noreferrer">꾸도북 앱 열기 <span>↗</span></a><button class="action secondary" type="button" data-video="HewfSkfBDhg" data-name="꾸도북 소개 영상">소개 영상 재생 <span>▶</span></button></div></article></div></section>
+<section class="section wrap" id="business"><div class="section-heading"><div><div class="eyebrow">03 / Local Business</div><h2>SMALL BUSINESS.</h2></div><p>작은 가게가 가진 개성과 이야기를 짧은 홍보영상에 담았습니다. 두 편의 광고를 각각 재생할 수 있습니다.</p></div><div class="grid" id="businessItems"></div></section>
+<section class="section wrap" id="more"><div class="section-heading"><div><div class="eyebrow">04 / More Stories</div><h2>BEYOND.</h2></div><p>디지털 도구를 다른 사람에게 설명하는 강의, 그림책 영상, 마지막 엔딩까지—기획과 제작의 확장입니다.</p></div><div class="grid" id="moreItems"></div></section>
+<section class="section story"><div class="wrap storyline"><div><div class="eyebrow">About the Planner</div><h2>경험을 기획으로,<br>기획을 실행으로.</h2><p>20년의 직장 경험에서 얻은 관찰과 실행의 태도를 바탕으로 새로운 디지털 도전을 이어갑니다. 웹서비스와 영상은 서로 다른 형태지만, 누군가의 경험을 더 좋게 만드는 일이라는 공통점이 있습니다.</p></div><div class="aside">OBSERVE. 사람과 맥락을 살피고<br>PLAN. 흐름을 정리하고<br>CREATE. 실제로 만들어 봅니다.</div></div></section>
+</main>
+<footer><div class="wrap"><div class="foot-title">NEXT CHAPTER.</div><div class="small">DIGITAL PLANNER · CREATIVE PORTFOLIO<br>© 2026 · 영상은 YouTube, 앱은 각 서비스에서 제공됩니다.</div></div></footer>
+<div class="modal" id="modal" hidden role="dialog" aria-modal="true" aria-labelledby="videoTitle"><div class="modal-top"><div id="videoTitle" class="modal-title">VIDEO</div><button class="close" id="closeVideo" aria-label="영상 닫기" type="button">×</button></div><div class="player" id="player"></div><div class="modal-bottom"><span>닫기(X)를 누르면 포트폴리오가 그대로 보입니다.</span><a id="videoOriginal" href="#" target="_blank" rel="noopener noreferrer">YouTube에서 새 탭으로 열기 ↗</a></div></div>
+<script>
+const items={
+ film:[
+  {id:'BtIuXKRlpZ8',name:'2D',desc:'캐릭터와 색, 화면 구성으로 전하는 이야기'},
+  {id:'gn-2NeOc5dc',name:'2D Motion',desc:'움직임과 장면 전환을 더한 모션 표현'},
+  {id:'gtKwQhJCmWU',name:'3D',desc:'입체 캐릭터와 공간감으로 확장한 장면'}
+ ],
+ business:[
+  {id:'p-CIePKyNxQ',name:'소상공인 광고 01',desc:'첫 번째 가게 홍보영상',shorts:true},
+  {id:'vZcGDIBxSfc',name:'소상공인 광고 02',desc:'두 번째 가게 홍보영상',shorts:true}
+ ],
+ more:[
+  {id:'4AiHB5hJe4A',name:'AI 앱 제작 강의',desc:'직접 설명하고 참여자와 함께하는 강의 장면'},
+  {id:'ToKfkhF8gno',name:'그림책 영상',desc:'이미지와 스토리를 연결한 영상 작업'},
+  {id:'BmVNpfEoYX4',name:'엔딩 영상',desc:'다음 장으로 이어지는 마무리'}
+ ]
+};
+function youtubeLink(id){return 'https://www.youtube.com/watch?v='+encodeURIComponent(id)}
+function thumbnail(id){return 'https://img.youtube.com/vi/'+encodeURIComponent(id)+'/hqdefault.jpg'}
+function render(container,arr,prefix){
+ const node=document.getElementById(container);
+ arr.forEach((v,i)=>{
+  const article=document.createElement('article');article.className='work';
+  const button=document.createElement('button');button.type='button';button.className='image-button';button.dataset.video=v.id;button.dataset.name=v.name;button.setAttribute('aria-label',v.name+' 영상 재생');
+  const fallback=document.createElement('div');fallback.className='placeholder';fallback.textContent=v.name;button.appendChild(fallback);
+  const image=document.createElement('img');image.src=thumbnail(v.id);image.loading='lazy';image.alt=v.name+' 영상 미리보기';image.addEventListener('load',()=>{fallback.hidden=true});image.addEventListener('error',()=>{image.hidden=true});button.appendChild(image);
+  const meta=document.createElement('div');meta.className='work-meta';
+  const no=document.createElement('span');no.className='num';no.textContent=prefix+' / '+String(i+1).padStart(2,'0');
+  const title=document.createElement('h3');title.textContent=v.name;
+  const desc=document.createElement('p');desc.textContent=v.desc;
+  meta.append(no,title,desc);article.append(button,meta);node.append(article);
+ })
+}
+render('filmItems',items.film,'FILM');render('businessItems',items.business,'LOCAL');render('moreItems',items.more,'WORK');
+const modal=document.getElementById('modal');const player=document.getElementById('player');const closeVideo=document.getElementById('closeVideo');let lastFocus=null;
+function openVideo(id,name){lastFocus=document.activeElement;document.getElementById('videoTitle').textContent=name;document.getElementById('videoOriginal').href=youtubeLink(id);player.innerHTML='';const iframe=document.createElement('iframe');iframe.title=name+' 재생';iframe.src='https://www.youtube-nocookie.com/embed/'+encodeURIComponent(id)+'?autoplay=1&rel=0&playsinline=1';iframe.allow='autoplay; encrypted-media; picture-in-picture; fullscreen';iframe.allowFullscreen=true;iframe.referrerPolicy='strict-origin-when-cross-origin';player.appendChild(iframe);modal.hidden=false;document.body.style.overflow='hidden';closeVideo.focus()}
+function closePlayer(){player.innerHTML='';modal.hidden=true;document.body.style.overflow='';if(lastFocus&&lastFocus.focus)lastFocus.focus()}
+document.addEventListener('click',event=>{const control=event.target.closest('[data-video]');if(control){openVideo(control.dataset.video,control.dataset.name||'영상')}});
+closeVideo.addEventListener('click',closePlayer);modal.addEventListener('click',event=>{if(event.target===modal)closePlayer()});document.addEventListener('keydown',event=>{if(event.key==='Escape'&&!modal.hidden)closePlayer()});
+</script>
+</body>
+</html>
